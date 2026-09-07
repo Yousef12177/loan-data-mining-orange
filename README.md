@@ -57,11 +57,29 @@ This operational inference pipeline feeds unseen applicant data into the pre-tra
 
 ---
 
-### 4. Bivariate Scatter Plot & Outlier Detection
+### 4. Bivariate Scatter Plot
 ![Applicant Income Scatter Plot](the%20scater%20plot.png)
 
 * **Feature Interaction:** Maps `Applicant_Income` across `Gender` categories colored by target loan outcome.
-* **Outlier Isolation:** Identifies extreme income data points ($>8 \times 10^6$), validating the downstream **Outliers** filtering node.
+* **Outlier Visual Detection:** Highlights extreme income values ($>8 \times 10^6$), visually justifying the necessity of outlier filtering.
+
+---
+
+## 🧹 Data Preprocessing: Inlier & Outlier Filtering
+
+### 1. Inlier Dataset (Model Training Data)
+![Filtered Inliers Dataset](the%20inleires.png)
+
+* **Clean Instances:** Retained **351 clean instances** with zero missing values across 11 features.
+* **Training Safety:** Eliminates extreme variance to prevent machine learning algorithms from overfitting to distorted financial records.
+
+---
+
+### 2. Outlier Dataset (Isolated Anomalies)
+![Isolated Outliers Dataset](outleires.png)
+
+* **Anomalous Points:** Isolated **33 outlier instances** identified by the Orange Outliers detector node.
+* **Quality Assurance:** Segregates anomalous records while keeping the primary training data distribution clean and reliable.
 
 ---
 
