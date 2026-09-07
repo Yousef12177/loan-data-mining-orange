@@ -1,0 +1,1 @@
+This project uses Orange Data Mining to automate and improve loan eligibility prediction for the banking industry. The system processes both structured tabular data (CSV) and unstructured financial document images to determine whether an applicant is eligible for a loan
